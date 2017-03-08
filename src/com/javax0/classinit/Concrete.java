@@ -18,8 +18,13 @@ public class Concrete {
         println("constructor");
     }
 
+    static void throwUp() {
+        throw new RuntimeException();
+    }
+
     static {
         println("static block after constructor");
+        throwUp();
     }
 
     {
